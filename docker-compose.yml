@@ -9,6 +9,8 @@ services:
       - DB_HOST=db
       - DB_USER=root
       - DB_PASSWORD=root_password
+      - DB_DATABASE_WORKERMANAGE=tempassignments_db
+      - DB_DATABASE_TEMP=tempassignments_db
     depends_on:
       - db
     restart: always
