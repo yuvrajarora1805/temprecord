@@ -15,6 +15,201 @@
       "id": 51,
       "name": "LINE 3",
       "is_active": 1
+    },
+    {
+      "id": 52,
+      "name": "PROJECTION LINE",
+      "is_active": 1
+    },
+    {
+      "id": 54,
+      "name": "S/A ASSY 1",
+      "is_active": 1
+    },
+    {
+      "id": 55,
+      "name": "STEP SARI",
+      "is_active": 1
+    },
+    {
+      "id": 56,
+      "name": "S/A ACLA",
+      "is_active": 1
+    },
+    {
+      "id": 57,
+      "name": "MAIN STAND ADJR 2",
+      "is_active": 1
+    },
+    {
+      "id": 58,
+      "name": "S/A ACKC 1",
+      "is_active": 1
+    },
+    {
+      "id": 59,
+      "name": "S/A ACKC 2",
+      "is_active": 1
+    },
+    {
+      "id": 60,
+      "name": "HANDLE ABSE",
+      "is_active": 1
+    },
+    {
+      "id": 62,
+      "name": "HOLDER ABWZ",
+      "is_active": 1
+    },
+    {
+      "id": 63,
+      "name": "LINE 4",
+      "is_active": 1
+    },
+    {
+      "id": 64,
+      "name": "SIDE STAND KST",
+      "is_active": 1
+    },
+    {
+      "id": 65,
+      "name": "HOLDER RAAA",
+      "is_active": 1
+    },
+    {
+      "id": 66,
+      "name": "MAIN STAND ADJR 1",
+      "is_active": 1
+    },
+    {
+      "id": 67,
+      "name": "SIDE STAND ACLA",
+      "is_active": 1
+    },
+    {
+      "id": 68,
+      "name": "S/A AAFF",
+      "is_active": 1
+    },
+    {
+      "id": 69,
+      "name": "PACKING",
+      "is_active": 1
+    },
+    {
+      "id": 70,
+      "name": "REWORK",
+      "is_active": 1
+    },
+    {
+      "id": 71,
+      "name": "HANDLE ACPD",
+      "is_active": 1
+    },
+    {
+      "id": 72,
+      "name": "HANDLE ACPC",
+      "is_active": 1
+    },
+    {
+      "id": 73,
+      "name": "MAIN STAND ACKA",
+      "is_active": 1
+    },
+    {
+      "id": 74,
+      "name": "S/A ASSY 2",
+      "is_active": 1
+    },
+    {
+      "id": 75,
+      "name": "STEP SARI ASSY",
+      "is_active": 1
+    },
+    {
+      "id": 76,
+      "name": "SIDE STAND TAPPING",
+      "is_active": 1
+    },
+    {
+      "id": 77,
+      "name": "HOLDER ASSY",
+      "is_active": 1
+    },
+    {
+      "id": 78,
+      "name": "HONDA R500",
+      "is_active": 1
+    },
+    {
+      "id": 79,
+      "name": "HONDA R600",
+      "is_active": 1
+    },
+    {
+      "id": 80,
+      "name": "HONDA L500",
+      "is_active": 1
+    },
+    {
+      "id": 81,
+      "name": "HONDA ASSY",
+      "is_active": 1
+    },
+    {
+      "id": 82,
+      "name": "SARI GUARD K0EG",
+      "is_active": 1
+    },
+    {
+      "id": 83,
+      "name": "SARI GUARD K1KF",
+      "is_active": 1
+    },
+    {
+      "id": 84,
+      "name": "BRKT METER",
+      "is_active": 1
+    },
+    {
+      "id": 85,
+      "name": "FENDER K3RA",
+      "is_active": 1
+    },
+    {
+      "id": 88,
+      "name": "ENG UPPER",
+      "is_active": 1
+    },
+    {
+      "id": 89,
+      "name": "ENG LOWER",
+      "is_active": 1
+    },
+    {
+      "id": 90,
+      "name": "BACK REST",
+      "is_active": 1
+    },
+    {
+      "id": 91,
+      "name": "CARRIER RR",
+      "is_active": 1
+    },
+    {
+      "id": 92,
+      "name": "HEADLIGHT",
+      "is_active": 1
+    },
+    {
+      "id": 93,
+      "name": "HOLDER R4AC ",
+      "is_active": 1
+    },
+    {
+      "id": 94,
+      "name": "Frame tapping",
+      "is_active": 1
     }
   ]
 }
