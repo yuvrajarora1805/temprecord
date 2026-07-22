@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 49,
+      "name": "LINE 1",
+      "is_active": 1
+    },
+    {
+      "id": 50,
+      "name": "LINE 2",
+      "is_active": 1
+    },
+    {
+      "id": 51,
+      "name": "LINE 3",
+      "is_active": 1
+    }
+  ]
+}
