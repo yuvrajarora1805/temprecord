@@ -23,14 +23,20 @@ export async function GET(request) {
                 .filter(m => m.line_id === lineIdNum && m.is_active === 1)
                 .sort((a, b) => a.position - b.position);
 
-            // Fetch today's temporary allocations from temp DB
+            // Fetch temporary allocations from temp DB
+            const allocationDate = searchParams.get('date');
             const tempConn = await tempassignmentsPool.getConnection();
             let allocations = [];
             try {
-                const [rows] = await tempConn.query(
-                    'SELECT id, machine_id, employee_id, worker_name FROM temp_allocations WHERE line_id = ? AND DATE(created_at) = CURDATE()',
-                    [lineIdForCells]
-                );
+                let query = 'SELECT id, machine_id, employee_id, worker_name FROM temp_allocations WHERE line_id = ? AND allocation_date = CURDATE()';
+                let queryParams = [lineIdForCells];
+                
+                if (allocationDate) {
+                    query = 'SELECT id, machine_id, employee_id, worker_name FROM temp_allocations WHERE line_id = ? AND allocation_date = ?';
+                    queryParams.push(allocationDate);
+                }
+
+                const [rows] = await tempConn.query(query, queryParams);
                 allocations = rows;
             } finally {
                 tempConn.release();
@@ -64,7 +70,7 @@ export async function GET(request) {
 export async function POST(request) {
     try {
         const body = await request.json();
-        const { line_id, machine_id, employee_id, worker_name } = body;
+        const { line_id, machine_id, employee_id, worker_name, date } = body;
 
         if (!line_id || !machine_id || !employee_id) {
             return NextResponse.json({ success: false, error: 'Line, Cell, and Employee ID are required' }, { status: 400 });
@@ -72,9 +78,10 @@ export async function POST(request) {
 
         const connection = await tempassignmentsPool.getConnection();
         try {
+            const allocationDate = date || new Date().toISOString().split('T')[0];
             const [result] = await connection.query(
-                'INSERT INTO temp_allocations (line_id, machine_id, employee_id, worker_name) VALUES (?, ?, ?, ?)',
-                [line_id, machine_id, employee_id, worker_name || null]
+                'INSERT INTO temp_allocations (line_id, machine_id, employee_id, worker_name, allocation_date) VALUES (?, ?, ?, ?, ?)',
+                [line_id, machine_id, employee_id, worker_name || null, allocationDate]
             );
 
             return NextResponse.json({ success: true, message: 'Temporary allocation recorded successfully!', id: result.insertId });
